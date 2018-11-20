@@ -1,0 +1,102 @@
+<html>
+<title>loginpage</title>
+<head>
+<style>
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+input[type=name], [type=password]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+html {
+      background: url(background-board-book-733854.jpg) no-repeat center fixed;
+      background-size: 1366px 850px;
+}
+.column {
+    float: left;
+    width: 50%;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<div class="column">
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          <img src="logo.jpg" height="210" width="220" align="center">
+</pre>
+</div>
+<div class="column">
+<pre>
+
+
+
+
+
+
+
+<form action="LoginPageServlet" method="post"> 
+<font size="4" align="center" face="Lucida Bright" color="white">
+
+
+
+
+                                     Username: <input type="name" placeholder="Username" name="uname"><br>
+                                      Password: <input type="password" placeholder="Password" name="pwd">
+<font color=black">
+<pre>                           <button onclick="submitButton()" class="button">Login</button>  <button type="submit" class="button" formaction="signup.html">SignUp</button></font></pre>
+<script>
+function submitButton() {
+    var res = confirm("Are you sure?");
+if(res == true){
+    alert("Login successful.");
+}
+}
+</script>
+</form>
+</pre>
+</div>
+<div class="column side"></div>
+</font>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+<title>signup</title>
+<head>
+<style>
+html {
+      background: url(green-leaves-plant-1072179.jpg) no-repeat center fixed;
+      background-size: 1366px 850px;
+}
+.signup
+{
+   background-color: rgba(192,192,192,0.2);
+   height: 470px;
+   width: 50%;
+   font-family: Lucida Bright;
+   text-align: justify;
+   font-size: 16px;
+   opacity: 2;
+   color: white;
+   margin-left: auto;
+   margin-right: auto;
+   border-radius: 20px;
+}
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+button {
+    background-color: black;
+    border: none;
+    color: #ddd;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity:1;
+}
+
+.cancelbtn, .signupbtn {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+button[type=submit]:hover {
+    background-color: #009933;
+    color: black;
+}
+button[type=button]:hover {
+    background-color: #ff3300;
+    color: black;
+}
+
+</style>
+<body>
+<font size="12" align="center" face="Lucida Bright" color="white"><h2>Sign Up</h2>
+<div class = "signup">
+<form name="signup" action="SignUpPageServlet" method = "post">
+<br>
+
+    <pre>             Name: <input type="text" placeholder="Enter Name" name="name" required><br></pre>
+
+    <pre>         Username: <input type="text" placeholder="Enter Username" name="uname" required><br></pre>
+
+          <pre>         Password: <input id = "psw" type="password" placeholder="Enter Password" name="pwd" required><br></pre>
+
+  <pre>  Repeat Password: <input id="repeat-psw" type="password" placeholder="Repeat Password" name="rpwd" required><br></pre>
+   <pre>                              <input id="repeat" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me<br><br></pre>
+    <div class="button">
+    <pre>                    <button type="submit" class="signupbtn">Sign Up</button>      <button type="button" class="cancelbtn">Cancel</button></pre>
+</div>
+</form>
+</div>
+</body>
+</html>
