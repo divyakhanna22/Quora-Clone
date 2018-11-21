@@ -1,3 +1,14 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    if(session.getAttribute("uname") == null)
+    {
+        RequestDispatcher rd = request.getRequestDispatcher("loginpage.html");
+        rd.forward(request, response);
+    }
+    HttpSession nsession = request.getSession(false);
+    if(nsession != null)
+    {
+       %>
 <html>
 <title>homepage</title>
 <head>
@@ -38,7 +49,7 @@ body {
 }
 html
 {
-    background: url(agreement-application-business-893894.jpg) no-repeat center fixed;
+    background: url(blank-brainstorming-business-6357.jpg) no-repeat center fixed;
     background-size: 1366px 850px;
 }
 .button {
@@ -54,8 +65,8 @@ html
     cursor: pointer;
 }
 textarea {
-    width: 70%;
-    height: 70px;
+    width: 60%;
+    height: 80px;
     padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid black;
@@ -65,6 +76,7 @@ textarea {
     resize: none;
     float: center;
     color: black;
+    font-family: Corbel;
 }
 .topnav .search-container {
   float: right;
@@ -95,7 +107,7 @@ textarea {
     color: black;
 }
 
-.topnav .search-container {
+  .topnav .search-container {
     float: none;
   }
 .topnav .search-container button {
@@ -109,7 +121,6 @@ textarea {
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
-
 .row {
   display: flex;
 }
@@ -205,6 +216,13 @@ input[type=submit]:hover {
     color: red;
     border-radius: 20px;
 }
+.qs
+{
+   font-family: Corbel;
+   text-align: center;
+   font-size: 25px;
+   color: white;
+}
 </style>
 </head>
 <body class="container">
@@ -216,29 +234,37 @@ input[type=submit]:hover {
 <a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/homepage.html">Home</a>
 <span style="cursor:pointer" onclick="openNav()"><a href"#">About</a></span>
 <a href="#">Answer</a>
-<div class="logout"><a href="#">Logout</a></div>
+<form action="loginpage.html" method="post">
+<div class="logout"><input type="submit" value="Logout"></div>
+<div class="uname">
+<%= request.getSession().getAttribute("uname").toString()
+        %>
+</div>
 </font>
 </div>
+</form>
 <div class="row">
   <div class="left">
     <ul id="myMenu">
-      <li><a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/homepage.html">Feed</a></li>
-      <li><a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/restaurants.html">Restaurants</a></li>
-      <li><a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/photography.html">Photography</a></li>
-      <li><a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/fashion&style.html">Fashion and Style</a></li>
-      <li><a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/travel.html">Travel</a></li>
-      <li><a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/mathematics.html">Mathematics</a></li>
-      <li><a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/cooking.html">Cooking</a></li>
-      <li><a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/education.html">Education</a></li>
-      <li><a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/movies.html">Movies</a></li>
+      <li><a href="homepage.jsp">Feed</a></li>
+      <li><a href="restaurants.html">Restaurants</a></li>
+      <li><a href="photography.html">Photography</a></li>
+      <li><a href="fashion&style.html">Fashion and Style</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="mathematics.html">Mathematics</a></li>
+      <li><a href="cooking.html">Cooking</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="movies.html">Movies</a></li>
     </ul>
   </div>
 <div class="right">
+<div class="qs"><h1>Have a question?</h1></div>
 <form>
-<pre>                   <textarea placeholder="What is your question?"></textarea></pre>
+<pre>                           <textarea placeholder="Enter your topic.."></textarea></pre>
+<pre>                           <textarea placeholder="Enter your sub-topic.."></textarea></pre>
+<pre>                           <textarea placeholder="Enter your question.."></textarea></pre>
 <pre>                                                            <input type="submit" value="Add Question"></pre>
-</form>    
-</div>
+</form>
 </div>
 <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -276,3 +302,5 @@ function closeNav() {
 </script>
 </body>
 </html>
+<%}
+%>

@@ -25,6 +25,18 @@
         <servlet-name>SignUpPageServlet</servlet-name>
         <servlet-class>Controller.SignUpPageServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogoutPageServlet</servlet-name>
+        <servlet-class>Controller.LogoutPageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HomePageServlet</servlet-name>
+        <servlet-class>Controller.HomePageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>Controller.LogoutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MyServlet</servlet-name>
         <url-pattern>/MyServlet</url-pattern>
@@ -44,6 +56,18 @@
     <servlet-mapping>
         <servlet-name>SignUpPageServlet</servlet-name>
         <url-pattern>/SignUpPageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutPageServlet</servlet-name>
+        <url-pattern>/LogoutPageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomePageServlet</servlet-name>
+        <url-pattern>/HomePageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

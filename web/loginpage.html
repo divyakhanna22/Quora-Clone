@@ -45,6 +45,10 @@ html {
     cursor: pointer;
     border-radius: 5px;
 }
+button[type=submit]:hover {
+    background-color: #ffff66;
+    color: black;
+}
 </style>
 </head>
 <body>
@@ -84,7 +88,7 @@ html {
                                      Username: <input type="name" placeholder="Username" name="uname"><br>
                                       Password: <input type="password" placeholder="Password" name="pwd">
 <font color=black">
-<pre>                           <button onclick="submitButton()" class="button">Login</button>  <button type="submit" class="button" formaction="signup.html">SignUp</button></font></pre>
+<pre>                           <button type="submit" onclick="submitButton()" class="button">Login</button>  <button type="submit" class="button" formaction="signup.html">SignUp</button></font></pre>
 <script>
 function submitButton() {
     var res = confirm("Are you sure?");

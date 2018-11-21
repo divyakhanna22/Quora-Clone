@@ -8,8 +8,9 @@
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/signup.html</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/newjsp.jsp</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Model/LoginDB.java</file>
-            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/homepage.html</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/LogoutServlet.java</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/LoginPageServlet.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/homepage.jsp</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/SignUpPageServlet.java</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/index.html</file>
         </group>
