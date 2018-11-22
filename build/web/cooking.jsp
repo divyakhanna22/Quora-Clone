@@ -1,3 +1,9 @@
+<% 
+    if(request.getSession().getAttribute("uname")==null){
+        RequestDispatcher rd = request.getRequestDispatcher("/loginpage.html");
+    }
+    else{
+        %>
 <html>
 <title>cooking</title>
 <head>
@@ -159,3 +165,5 @@ Following is what I saw in ALL 5 restaurants and is common throughout the restau
 </div>
 </body>
 </html>
+<%}
+%>

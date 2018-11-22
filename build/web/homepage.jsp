@@ -2,8 +2,9 @@
 <%
     if(session.getAttribute("uname") == null)
     {
-        RequestDispatcher rd = request.getRequestDispatcher("loginpage.html");
-        rd.forward(request, response);
+        response.sendRedirect("loginpage.html");
+        //RequestDispatcher rd = request.getRequestDispatcher("loginpage.html");
+        //rd.forward(request, response);
     }
     HttpSession nsession = request.getSession(false);
     if(nsession != null)
@@ -107,7 +108,7 @@ textarea {
     color: black;
 }
 
-  .topnav .search-container {
+.topnav .search-container {
     float: none;
   }
 .topnav .search-container button {
@@ -126,10 +127,11 @@ textarea {
 }
 .left {
   flex: 17%;
-  padding: 15px 0;
+  padding: 0px 0px;
   background-color: rgba(192,192,192,0.6);
+  margin-left: 0px;
+  margin-top: -12px;
 }
-
 .right {
   flex: 83%;
   padding: 15px;
@@ -146,7 +148,7 @@ textarea {
   background-color: rgba(192,192,192,0.2);
   padding: 12px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
   color: black;
   display: block;
 }
@@ -211,16 +213,17 @@ input[type=submit]:hover {
 }
 .logout
 {
+    margin-top: -10px;
     float: right;
-    background-color: rgba(192,192,192,0.7);
-    color: red;
+    color: white;
     border-radius: 20px;
+    font-family: Corbel;
 }
 .qs
 {
    font-family: Corbel;
    text-align: center;
-   font-size: 25px;
+   font-size: 42px;
    color: white;
 }
 </style>
@@ -234,15 +237,13 @@ input[type=submit]:hover {
 <a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/homepage.html">Home</a>
 <span style="cursor:pointer" onclick="openNav()"><a href"#">About</a></span>
 <a href="#">Answer</a>
-<form action="loginpage.html" method="post">
-<div class="logout"><input type="submit" value="Logout"></div>
-<div class="uname">
+<form action="logout.jsp" method="post">
+    <div class="logout">
 <%= request.getSession().getAttribute("uname").toString()
         %>
+        <input type="submit" value="Logout"></div></form>
 </div>
-</font>
-</div>
-</form>
+
 <div class="row">
   <div class="left">
     <ul id="myMenu">
@@ -258,12 +259,12 @@ input[type=submit]:hover {
     </ul>
   </div>
 <div class="right">
-<div class="qs"><h1>Have a question?</h1></div>
+<div class="qs">Have a question?</div>
 <form>
-<pre>                           <textarea placeholder="Enter your topic.."></textarea></pre>
-<pre>                           <textarea placeholder="Enter your sub-topic.."></textarea></pre>
-<pre>                           <textarea placeholder="Enter your question.."></textarea></pre>
-<pre>                                                            <input type="submit" value="Add Question"></pre>
+<pre><textarea placeholder="Enter your topic.."></textarea></pre>
+<pre><textarea placeholder="Enter your sub-topic.."></textarea></pre>
+<pre><textarea placeholder="Enter your question.."></textarea></pre>
+<pre><input type="submit" value="Add Question"></pre>
 </form>
 </div>
 <div id="myNav" class="overlay">
