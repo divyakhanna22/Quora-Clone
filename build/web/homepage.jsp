@@ -1,13 +1,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%
-    if(session.getAttribute("uname") == null)
+<% if(request.getSession().getAttribute("uname") == null)
     {
-        response.sendRedirect("loginpage.html");
-        //RequestDispatcher rd = request.getRequestDispatcher("loginpage.html");
-        //rd.forward(request, response);
+        response.sendRedirect("/loginpage.html");
+
     }
-    HttpSession nsession = request.getSession(false);
-    if(nsession != null)
+    else
     {
        %>
 <html>
@@ -236,7 +233,7 @@ input[type=submit]:hover {
 <font size="4" align="center" face="Lucida Bright" color="white">
 <a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/homepage.html">Home</a>
 <span style="cursor:pointer" onclick="openNav()"><a href"#">About</a></span>
-<a href="#">Answer</a>
+<a href="questions.jsp">Answer</a>
 <form action="logout.jsp" method="post">
     <div class="logout">
 <%= request.getSession().getAttribute("uname").toString()
@@ -247,23 +244,23 @@ input[type=submit]:hover {
 <div class="row">
   <div class="left">
     <ul id="myMenu">
-      <li><a href="homepage.jsp">Feed</a></li>
-      <li><a href="restaurants.html">Restaurants</a></li>
-      <li><a href="photography.html">Photography</a></li>
-      <li><a href="fashion&style.html">Fashion and Style</a></li>
-      <li><a href="travel.html">Travel</a></li>
-      <li><a href="mathematics.html">Mathematics</a></li>
-      <li><a href="cooking.html">Cooking</a></li>
-      <li><a href="education.html">Education</a></li>
-      <li><a href="movies.html">Movies</a></li>
+      <li><a href="feed.jsp">Feed</a></li>
+      <li><a href="restaurants.jsp">Restaurants</a></li>
+      <li><a href="photography.jsp">Photography</a></li>
+      <li><a href="fashion&style.jsp">Fashion and Style</a></li>
+      <li><a href="travel.jsp">Travel</a></li>
+      <li><a href="mathematics.jsp">Mathematics</a></li>
+      <li><a href="cooking.jsp">Cooking</a></li>
+      <li><a href="education.jsp">Education</a></li>
+      <li><a href="movies.jsp">Movies</a></li>
     </ul>
   </div>
 <div class="right">
 <div class="qs">Have a question?</div>
-<form>
-<pre><textarea placeholder="Enter your topic.."></textarea></pre>
-<pre><textarea placeholder="Enter your sub-topic.."></textarea></pre>
-<pre><textarea placeholder="Enter your question.."></textarea></pre>
+<form action="AddQuestionServlet" method="post">
+<pre><textarea placeholder="Enter your topic.." name="topic"></textarea></pre>
+<pre><textarea placeholder="Enter your sub-topic.." name="stopic"></textarea></pre>
+<pre><textarea placeholder="Enter your question.." name="ques"></textarea></pre>
 <pre><input type="submit" value="Add Question"></pre>
 </form>
 </div>

@@ -67,11 +67,34 @@ html
  color: black;
  font-size: 15px;
 }
+button[type=submit] {
+    background-color: black;
+    border: none;
+    color: #ddd;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-top: 15px;
+}
+button[type=submit]:hover {
+    background-color: #00cc66;
+    color: black;
+}
 </style>
 </head>
 <body>
+    <form method="post">
 <img src="photologo.jpg" height="90" width="90" align="left">
-<font size="12" align="left" face="Lucida Bright" color="white"><h2>Photography</h2></font>
+<font size="12" align="left" face="Lucida Bright" color="white"><h2>Photography
+    <button type="submit" class="button" formaction="homepage.jsp">Home</button></h2>
+</form>
+    </font>
 <div class = "photography1">
 <b><p class = "photo">Why is the Sony A7RM3 mirrorless camera the best still camera?</p></b>
 <p>42.4 MP, 10 fps and remarkable eye auto focus. Everything you need to get into serious image making.</p>

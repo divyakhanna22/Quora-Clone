@@ -4,15 +4,20 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/loginpage.html</file>
-            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/signup.html</file>
-            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/newjsp.jsp</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Model/LoginDB.java</file>
-            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/LogoutServlet.java</file>
-            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/LoginPageServlet.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/AnswerQuestionServlet.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/feed.jsp</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/homepage.jsp</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/SignUpPageServlet.java</file>
             <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/cooking.jsp</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/questions.jsp</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/loginpage.html</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/signup.html</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/newjsp.jsp</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/LogoutServlet.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/web/answers.jsp</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/LoginPageServlet.java</file>
+            <file>file:/C:/Users/Acer/Documents/NetBeansProjects/WebApplication1/src/java/Controller/AddQuestionServlet.java</file>
         </group>
     </open-files>
 </project-private>

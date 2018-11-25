@@ -67,11 +67,34 @@ html
  color: #ffff66;
  font-size: 15px;
 }
+button[type=submit] {
+    background-color: black;
+    border: none;
+    color: #ddd;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-top: 15px;
+}
+button[type=submit]:hover {
+    background-color: #00cc66;
+    color: black;
+}
 </style>
 </head>
 <body>
+    <form method="post">
 <img src="reslogo.jpg" height="90" width="90" align="left">
-<font size="12" align="left" face="Lucida Bright" color="white"><h2>Restaurants</h2></font>
+<font size="12" align="left" face="Lucida Bright" color="white"><h2>Restaurants
+    <button type="submit" class="button" formaction="homepage.jsp">Home</button></h2>
+</form>
+    </font>
 <div class = "restaurants1">
 <b><p class="para">What happens if you don�t tip your waiter in the U.S.?</p></b>
 <p>I once went to a restaurant with my fiance. The waitress was obviously flirting with him and flashing her cleavage every time she bent down. Little did she know I was the one who was going to pay because it was my fianc�s birthday.

@@ -14,10 +14,10 @@ public class LogoutServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        HttpSession csession = request.getSession(false);
+        HttpSession csession = request.getSession();
         csession.removeAttribute("uname");
         csession.invalidate();
-        response.sendRedirect("loginpage.html");
+        response.sendRedirect("/loginpage.html");
         
     }
 

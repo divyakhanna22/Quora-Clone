@@ -67,12 +67,33 @@ html
  color: #003366;
  font-size: 15px;
 }
+button[type=submit] {
+    background-color: black;
+    border: none;
+    color: #ddd;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    float: right;
+    margin-top: 15px;
+}
+button[type=submit]:hover {
+    background-color: #00cc66;
+    color: black;
+}
 </style>
 </head>
 <body>
+    <form method="post">
 <img src="fashionlogo.jpg" height="90" width="90" align="left">
-<font size="12" align="left" face="Lucida Bright" color="white"><h2>Fashion & Style</h2>
-</font>
+<font size="12" align="left" face="Lucida Bright" color="white"><h2>Fashion & Style
+    <button type="submit" class="button" formaction="homepage.jsp">Home</button></h2>
+    </form></font>
 <div class = "fashion1">
 <b><p class = "fash">What is the most inappropriate clothing you have seen a teacher wear at school?</b></p>
 <p>A sleeveless see-through saree blouse (at school) and a see-through top for home tuitions

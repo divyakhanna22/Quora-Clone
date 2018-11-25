@@ -67,11 +67,33 @@ html
  color: #ffff66;
  font-size: 15px;
 }
+button[type=submit] {
+    background-color: black;
+    border: none;
+    color: #ddd;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    float: right;
+}
+button[type=submit]:hover {
+    background-color: #00cc66;
+    color: black;
+}
 </style>
 </head>
 <body>
+    <form method="post">
 <img src="mathslogo.jpg" height="90" width="90" align="left">
-<font size="12" align="left" face="Lucida Bright" color="white"><h2>Mathematics</h2>
+<font size="12" align="left" face="Lucida Bright" color="white"><h2>Mathematics
+    <button type="submit" class="button" formaction="homepage.jsp">Home</button></h2>
+</form>
 </font>
 <div class = "maths1">
 <b><p class = "maths">What is the best math trick you have ever learned?</b></p>
