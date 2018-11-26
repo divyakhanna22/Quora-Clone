@@ -78,7 +78,7 @@ if(res == true){
         <div class="ans">Submit your answer here:<br><br>
 <textarea placeholder="Enter question id" name="qid"></textarea>
 <textarea placeholder="Enter your answer" name="answer"></textarea><br><br>
-<button type="submit" class="button" formaction="homepage.jsp" onclick="submitAnswer()">Submit</button>
+<button type="submit" class="button"  onclick="submitAnswer()">Submit</button>
 </form>
 </div>
 </body>

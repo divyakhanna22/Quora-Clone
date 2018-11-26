@@ -45,6 +45,10 @@
         <servlet-name>AnswerQuestionServlet</servlet-name>
         <servlet-class>Controller.AnswerQuestionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FeedServlet</servlet-name>
+        <servlet-class>Controller.FeedServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MyServlet</servlet-name>
         <url-pattern>/MyServlet</url-pattern>
@@ -84,6 +88,10 @@
     <servlet-mapping>
         <servlet-name>AnswerQuestionServlet</servlet-name>
         <url-pattern>/AnswerQuestionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FeedServlet</servlet-name>
+        <url-pattern>/FeedServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

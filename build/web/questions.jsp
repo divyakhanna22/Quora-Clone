@@ -6,11 +6,6 @@
 <title>questions</title>
 <head>
 <style>
-html
-{
-    background: url(abstract-art-background-370799.jpg) no-repeat center fixed;
-    background-size: 1366px 850px;
-}
 .ques
 {
    height: 500px;
@@ -23,14 +18,16 @@ html
    margin-left: auto;
    margin-right: auto;
 }
-#questions {
+#questions 
+{
     font-family: Corbel;
     border-collapse: collapse;
     width: 100%;
     background-color: rgba(192,192,192,0.2);
 }
 
-#questions td, #questions th {
+#questions td, #questions th 
+{
     border: 1px solid #ddd;
     padding: 15px;
     color: white;
@@ -38,13 +35,11 @@ html
     font-family: Corbel;
     
 }
-
 #questions tr:hover 
 {
     background-color: black;
     color: #ddd;
 }
-
 #questions th {
     padding-top: 12px;
     padding-bottom: 12px;
@@ -69,17 +64,32 @@ button[type=submit] {
 }
 button[type=submit]:hover {
     background-color: #00cc66;
-    color: black
+    color: black}
+#particle-js canvas
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+}
+#particles-js{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
 </style>
 </head>
-<body>
+<body bgcolor="#000000">
+    <div id="particles-js"></div>
     <form action="AnswerQuestionServlet" method="post">
         <font size="12" align="center" face="Lucida Bright" color="white"><h2>Questions
             <button type="submit" class="button" formaction="homepage.jsp">Home</button> <button type="submit" class="button" formaction="answers.jsp">Answer</button>
         </h2>
     </form>
     </font><br>
-    <div class = "ques">
+<div class = "ques">
 <form method="post">
 <table id = "questions">
 <tr>
@@ -101,7 +111,6 @@ Statement stmt = con.createStatement();
 ResultSet rs = stmt.executeQuery(query);
 while(rs.next())
 {
-
 %>
     <tr>
         <td><%=rs.getInt("qid")%></td>
@@ -110,10 +119,7 @@ while(rs.next())
     <td><%=rs.getString("stopic")%></td>
     <td><%=rs.getString("ques")%></td>
     </tr>
-    
-    
         <%
-
 }
 %>
     </table>
@@ -121,13 +127,15 @@ while(rs.next())
     rs.close();
     stmt.close();
     con.close();
-    }
+}
 catch(Exception e)
 {
     e.printStackTrace();
-    }
+}
 %>
 </form>
 </div>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script><script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="particles.js"></script>
 </body>
 </html>

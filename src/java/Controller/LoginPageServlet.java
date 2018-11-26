@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.LoginDB;
+import Model.loginpage;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -19,7 +20,8 @@ public class LoginPageServlet extends HttpServlet {
             PrintWriter out = response.getWriter();
             String uname = request.getParameter("uname");
             String pwd = request.getParameter("pwd");
-            if(LoginDB.validate(uname, pwd)){
+            loginpage l = new loginpage(uname,pwd);
+            if(LoginDB.search(l)){
                 HttpSession session = request.getSession();
                 session.setAttribute("uname", uname);
                 
