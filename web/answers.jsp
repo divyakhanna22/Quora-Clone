@@ -4,7 +4,7 @@
 <style>
 html
 {
-    background: url(above-art-background-733852.jpg) no-repeat center fixed;
+    background: url(green-leaves-plant-1072179.jpg) no-repeat center fixed;
     background-size: 1366px 850px;
 }
 .ans
@@ -42,7 +42,7 @@ button[type=submit]:hover {
    font-family: Corbel;
    text-align: center;
    font-size: 32px;
-   color: black;
+   color: white;
 }
 textarea {
     width: 60%;
@@ -70,7 +70,7 @@ if(res == true){
 </script>
 <body>
     <form method="post">
-        <font size="12" align="center" face="Lucida Bright" color="black"><h2>Let's Answer
+        <font size="12" align="center" face="Lucida Bright" color="white"><h2>Let's Answer
             <button type="submit" class="button" formaction="homepage.jsp">Home</button></h2><br>
     </form>
     </font>

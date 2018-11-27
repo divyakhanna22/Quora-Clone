@@ -1,3 +1,4 @@
+<%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
@@ -54,15 +55,15 @@ button[type=submit]:hover
 {
     border: 1px solid #ddd;
     padding: 15px;
-    color: white;
+    color: black;
     font-size: 17px;
     font-family: Corbel;
     
 }
 #feed-show tr:hover 
 {
-    background-color: black;
-    color: #ddd;
+    background-color: #ddd;
+    color: black;
 }
 #feed-show th {
     padding-top: 12px;
@@ -77,7 +78,7 @@ button[type=submit]:hover
 <body>
 <form method="post">
         <font size="12" align="center" face="Lucida Bright" color="black"><h2>Feed
-        <button type="submit" class="button" formaction="homepage.jsp">Home</button></h2><br>
+        <button type="submit" class="button" formaction="homepage.jsp">Home</button></h2>
 </form>
 </font>
 <div class = "feed">
@@ -92,32 +93,32 @@ button[type=submit]:hover
 </tr>
 <%
 try
-{
-Class.forName("com.mysql.jdbc.Driver");
-String username="root";
-String password="october22";
-String query="select * from feed";
-Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb?useSSL=false&allowPublicKeyRetrieval=true&verifyServerCertificate=false&allowMultiQueries=true","root","october22");
-Statement stmt = con.createStatement();
-ResultSet rs = stmt.executeQuery(query);
-while(rs.next())
-{
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb?useSSL=false&allowPublicKeyRetrieval=true&verifyServerCertificate=false&allowMultiQueries=true","root","october22");
+            PreparedStatement ps = con.prepareStatement("select distinct questiontable.qid, questiontable.qname, questiontable.ques, answertable.uname, answertable.answer from questiontable inner join answertable on questiontable.qid=answertable.qid");
+            
+            ResultSet rs = ps.executeQuery();
+             while(rs.next())
+             {
+                        
+          
+               
 %>
     <tr>
         <td><%=rs.getString("qid")%></td>
     <td><%=rs.getString("qname")%></td>
     <td><%=rs.getString("ques")%></td>
-    <td><%=rs.getString("aname")%></td>
+    <td><%=rs.getString("uname")%></td>
     <td><%=rs.getString("answer")%></td>
     </tr>
-        <%
+        
+    <%
+  
 }
 %>
-    </table>
-    <%
-    rs.close();
-    stmt.close();
-    con.close();
+</table>
+<%
 }
 catch(Exception e)
 {

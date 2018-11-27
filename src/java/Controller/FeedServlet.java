@@ -23,12 +23,12 @@ public class FeedServlet extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
        
-        String uname = (String) request.getSession().getAttribute("uname");
-        String qid = request.getParameter("qid");
-        String ques = request.getParameter("ques");
-        String answer = request.getParameter("answer");
-        String uname1 = request.getParameter("uname1");
-        
+//        String qid = request.getParameter("qid");
+//        String ques = request.getParameter("ques");
+//        String answer = request.getParameter("answer");
+//        String uname1 = request.getParameter("uname1");
+//        System.out.println("check "+qid);
+        System.out.println("");
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -36,28 +36,28 @@ public class FeedServlet extends HttpServlet {
             PreparedStatement ps = con.prepareStatement("select questiontable.qid, questiontable.uname, questiontable.ques, answertable.uname, answertable.answer from questiontable inner join answertable on questiontable.qid=answertable.qid");
             
             ResultSet rs = ps.executeQuery();
-      
-             if(rs.next())
-       {
+             while(rs.next())
+             {
+                        
+                        String qid = rs.getString(1);
+                        System.out.println("check qid" + qid);
+                         String uname1 = rs.getString(2);
+                        String ques = rs.getString(3);
+                        String uname = (String) request.getSession().getAttribute("uname");
+                        String answer = rs.getString(4);
+                        
+                        PreparedStatement ps1 = con.prepareStatement("insert into feed values(?,?,?,?,?)");
+                        ps1.setString(1,qid);
+                        ps1.setString(2,uname1);
+                        ps1.setString(3,ques);
+                        ps1.setString(4,uname);
+                        ps1.setString(5,answer);
+                        int rs1 = ps1.executeUpdate();
+            }
+           
            RequestDispatcher rd = request.getRequestDispatcher("/feed.jsp");
                 rd.forward(request, response);
-       }
-             PreparedStatement ps1 = con.prepareStatement("insert into feed values(?,?,?,?,?)");
        
-       ps1.setString(1,qid);
-       ps1.setString(2,uname1);
-       ps1.setString(3,ques);
-       ps1.setString(4, uname);
-       ps1.setString(5, answer);
-       
-       int rs1 = ps1.executeUpdate();
-       
-       int i=ps.executeUpdate();
-       if(i>0)
-       {
-           RequestDispatcher rd = request.getRequestDispatcher("/feed.jsp");
-                rd.forward(request, response);
-       }
        
         } 
         catch(ClassNotFoundException | SQLException e)

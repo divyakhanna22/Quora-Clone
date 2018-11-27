@@ -21,7 +21,7 @@ public class AddQuestionServlet extends HttpServlet {
             throws ServletException, IOException, SQLException, ClassNotFoundException {
         response.setContentType("text/html;charset=UTF-8");
        
-        String uname = (String) request.getSession().getAttribute("uname");
+        String qname = (String) request.getSession().getAttribute("qname");
         String topic = request.getParameter("topic");
         String stopic = request.getParameter("stopic");
         String ques = request.getParameter("ques");
@@ -30,9 +30,9 @@ public class AddQuestionServlet extends HttpServlet {
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb?useSSL=false&allowPublicKeyRetrieval=true&verifyServerCertificate=false&allowMultiQueries=true","root","october22");
-            PreparedStatement ps = con.prepareStatement("insert into questiontable(uname,topic,stopic,ques) values(?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("insert into questiontable(qname,topic,stopic,ques) values(?,?,?,?)");
             
-            ps.setString(1,uname);
+            ps.setString(1,qname);
             ps.setString(2,topic);
             ps.setString(3,stopic);
             ps.setString(4,ques);

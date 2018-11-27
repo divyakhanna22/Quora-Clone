@@ -6,6 +6,11 @@
 <title>questions</title>
 <head>
 <style>
+html
+{
+        background: url(beverage-blank-break-997719.jpg) no-repeat center fixed;
+        background-size: 1366px 850px;
+}
 .ques
 {
    height: 500px;
@@ -30,15 +35,15 @@
 {
     border: 1px solid #ddd;
     padding: 15px;
-    color: white;
+    color: black;
     font-size: 17px;
     font-family: Corbel;
     
 }
 #questions tr:hover 
 {
-    background-color: black;
-    color: #ddd;
+    background-color: #ddd;
+    color: black;
 }
 #questions th {
     padding-top: 12px;
@@ -64,27 +69,13 @@ button[type=submit] {
 }
 button[type=submit]:hover {
     background-color: #00cc66;
-    color: black}
-#particle-js canvas
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -999;
-}
-#particles-js{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-position: 100%;
-  background-repeat: no-repeat;
+    color: black
 }
 </style>
 </head>
-<body bgcolor="#000000">
-    <div id="particles-js"></div>
+<body>
     <form action="AnswerQuestionServlet" method="post">
-        <font size="12" align="center" face="Lucida Bright" color="white"><h2>Questions
+        <font size="12" align="center" face="Lucida Bright" color="black"><h2>Questions
             <button type="submit" class="button" formaction="homepage.jsp">Home</button> <button type="submit" class="button" formaction="answers.jsp">Answer</button>
         </h2>
     </form>
@@ -114,7 +105,7 @@ while(rs.next())
 %>
     <tr>
         <td><%=rs.getInt("qid")%></td>
-    <td><%=rs.getString("uname")%></td>
+    <td><%=rs.getString("qname")%></td>
     <td><%=rs.getString("topic")%></td>
     <td><%=rs.getString("stopic")%></td>
     <td><%=rs.getString("ques")%></td>
@@ -135,7 +126,5 @@ catch(Exception e)
 %>
 </form>
 </div>
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script><script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-<script src="particles.js"></script>
 </body>
 </html>
