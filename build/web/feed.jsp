@@ -34,7 +34,7 @@ button[type=submit]:hover
 .feed
 {
    height: 500px;
-   width: 50%;
+   width: 100%;
    font-family: Lucida Bright;
    text-align: justify;
    font-size: 14px;
@@ -53,8 +53,8 @@ button[type=submit]:hover
 
 #feed-show td, #feed-show th 
 {
-    border: 1px solid #ddd;
-    padding: 15px;
+    border: 0.5px solid #ddd;
+    padding: 20px;
     color: black;
     font-size: 17px;
     font-family: Corbel;
@@ -62,7 +62,7 @@ button[type=submit]:hover
 }
 #feed-show tr:hover 
 {
-    background-color: #ddd;
+    background-color: #00b359;
     color: black;
 }
 #feed-show th {
@@ -87,6 +87,8 @@ button[type=submit]:hover
 <tr>
     <th>QUESTION ID</th>
     <th>WHO ASKED</th>
+    <th>TOPIC</th>
+    <th>SUB-TOPIC</th>
     <th>QUESTION</th>
     <th>WHO ANSWERED</th>
     <th>ANSWER</th>
@@ -96,7 +98,7 @@ try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb?useSSL=false&allowPublicKeyRetrieval=true&verifyServerCertificate=false&allowMultiQueries=true","root","october22");
-            PreparedStatement ps = con.prepareStatement("select distinct questiontable.qid, questiontable.qname, questiontable.ques, answertable.uname, answertable.answer from questiontable inner join answertable on questiontable.qid=answertable.qid");
+            PreparedStatement ps = con.prepareStatement("select distinct questiontable.qid, questiontable.qname, questiontable.topic, questiontable.stopic, questiontable.ques, answertable.uname, answertable.answer from questiontable inner join answertable on questiontable.qid=answertable.qid");
             
             ResultSet rs = ps.executeQuery();
              while(rs.next())
@@ -108,6 +110,8 @@ try
     <tr>
         <td><%=rs.getString("qid")%></td>
     <td><%=rs.getString("qname")%></td>
+    <td><%=rs.getString("topic")%></td>
+    <td><%=rs.getString("stopic")%></td>
     <td><%=rs.getString("ques")%></td>
     <td><%=rs.getString("uname")%></td>
     <td><%=rs.getString("answer")%></td>

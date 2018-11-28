@@ -238,6 +238,7 @@ input[type=submit]:hover {
     <div class="logout">
 <%= request.getSession().getAttribute("uname").toString()
         %>
+        
         <input type="submit" value="Logout"></div>
 </form>
 </div>
@@ -245,7 +246,8 @@ input[type=submit]:hover {
 <div class="row">
   <div class="left">
     <ul id="myMenu">
-        <li><form action="feed.jsp" method="post"><input type="submit" value="Feed"></form></li>
+        <li><a href="feed.jsp">Feed</a></li>
+      <!--  <li><form action="feed.jsp" method="post"><input type="submit" value="Feed"></form></li> -->
       <li><a href="restaurants.jsp">Restaurants</a></li>
       <li><a href="photography.jsp">Photography</a></li>
       <li><a href="fashion&style.jsp">Fashion and Style</a></li>
