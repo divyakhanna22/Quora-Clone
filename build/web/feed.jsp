@@ -9,7 +9,7 @@
 <style>
 html
 {
-    background: url(botanical-cactus-close-up-305821.jpg) no-repeat center fixed;
+    background: url(background-blank-business-317356.jpg) no-repeat center fixed;
     background-size: 1366px 850px;
 }
 button[type=submit] {
@@ -62,7 +62,7 @@ button[type=submit]:hover
 }
 #feed-show tr:hover 
 {
-    background-color: #00b359;
+    background-color: #ff9966;
     color: black;
 }
 #feed-show th {

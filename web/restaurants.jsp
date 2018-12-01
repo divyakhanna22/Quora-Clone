@@ -96,10 +96,10 @@ button[type=submit]:hover {
 </form>
     </font>
 <div class = "restaurants1">
-<b><p class="para">What happens if you don�t tip your waiter in the U.S.?</p></b>
+<b><p class="para">What happens if you don't tip your waiter in the U.S.?</p></b>
 <p>I once went to a restaurant with my fiance. The waitress was obviously flirting with him and flashing her cleavage every time she bent down. Little did she know I was the one who was going to pay because it was my fianc�s birthday.
 
-I didn�t say anything because I was afraid she would spit in my food or drink. When we left, I wrote a note telling her I wasn�t happy about her obvious flirting. I left her no tip. She posted it on Facebook. I saw it, but never said anything about it because they blocked out my name.</p>
+I didn't say anything because I was afraid she would spit in my food or drink. When we left, I wrote a note telling her I wasn�t happy about her obvious flirting. I left her no tip. She posted it on Facebook. I saw it, but never said anything about it because they blocked out my name.</p>
 
 </div>
 <div class = "restaurants2">

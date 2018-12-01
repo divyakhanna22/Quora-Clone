@@ -231,15 +231,14 @@ input[type=submit]:hover {
 </div>
 <div class="topnav">
 <font size="4" align="center" face="Lucida Bright" color="white">
-<a href="file:///C:/Users/Acer/Desktop/Divya/JAVA%20PROJECT/homepage.html">Home</a>
+<a href="homepage.jsp">Home</a>
 <span style="cursor:pointer" onclick="openNav()"><a href"#">About</a></span>
 <a href="questions.jsp">Answer</a>
 <form action="LogoutServlet" method="post">
     <div class="logout">
 <%= request.getSession().getAttribute("uname").toString()
         %>
-        
-        <input type="submit" value="Logout"></div>
+<input type="submit" value="Logout"></div>
 </form>
 </div>
 
@@ -247,7 +246,6 @@ input[type=submit]:hover {
   <div class="left">
     <ul id="myMenu">
         <li><a href="feed.jsp">Feed</a></li>
-      <!--  <li><form action="feed.jsp" method="post"><input type="submit" value="Feed"></form></li> -->
       <li><a href="restaurants.jsp">Restaurants</a></li>
       <li><a href="photography.jsp">Photography</a></li>
       <li><a href="fashion&style.jsp">Fashion and Style</a></li>

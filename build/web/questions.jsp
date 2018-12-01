@@ -8,7 +8,7 @@
 <style>
 html
 {
-        background: url(beverage-blank-break-997719.jpg) no-repeat center fixed;
+        background: url(blur-book-close-up-163142.jpg) no-repeat center fixed;
         background-size: 1366px 850px;
 }
 .ques
@@ -75,7 +75,7 @@ button[type=submit]:hover {
 </head>
 <body>
     <form action="AnswerQuestionServlet" method="post">
-        <font size="12" align="center" face="Lucida Bright" color="black"><h2>Questions
+        <font size="12" align="center" face="Lucida Bright" color="white"><h2>Questions
             <button type="submit" class="button" formaction="homepage.jsp">Home</button> <button type="submit" class="button" formaction="answers.jsp">Answer</button>
         </h2>
     </form>

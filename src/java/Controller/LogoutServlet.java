@@ -12,13 +12,14 @@ public class LogoutServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("tivyooooo");
         response.setContentType("text/html;charset=UTF-8");
         
-        HttpSession csession = request.getSession();
-        csession.removeAttribute("uname");
+        HttpSession csession = request.getSession(false);
+        //csession.removeAttribute("uname");
         csession.invalidate();
-        response.sendRedirect("/loginpage.html");
+        RequestDispatcher rd = request.getRequestDispatcher("/loginpage.html");
+        rd.forward(request,response);
+       // response.sendRedirect("/loginpage.html");
     }
 
     @Override

@@ -1,5 +1,4 @@
 <%
-  if (session != null)
-    session.invalidate();
-  response.sendRedirect("homepage.jsp");
+session.invalidate();
+response.sendRedirect("/loginpage.html");
 %>

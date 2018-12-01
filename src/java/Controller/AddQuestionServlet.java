@@ -21,7 +21,7 @@ public class AddQuestionServlet extends HttpServlet {
             throws ServletException, IOException, SQLException, ClassNotFoundException {
         response.setContentType("text/html;charset=UTF-8");
        
-        String qname = (String) request.getSession().getAttribute("qname");
+        String qname = (String) request.getSession().getAttribute("uname");
         String topic = request.getParameter("topic");
         String stopic = request.getParameter("stopic");
         String ques = request.getParameter("ques");
